@@ -80,4 +80,4 @@ heroku container:release -a <appname> web
 
 Rasa supports integration with multiple channels. Apart from exposing the REST api over http, we can integrate with facebook.
 
-Go to https://developers.facebook.com and create an app. We can handle messages sent to a facebook page from our app. To do so add messenger to the facebook app and subscribe to a page. Update app secret and page token in config/credentials.yml. On the facebook app, update the webhook url to the deployed heroku app (https://<appname>.herokuapp.com/webhooks/facebook/webhook).
+Go to https://developers.facebook.com and create an app. We can handle messages sent to a facebook page from our app. To do so add messenger to the facebook app and subscribe to a page. Update app secret and page token in config/credentials.yml. On the facebook app, update the webhook url to the deployed heroku app (https://APPNAME.herokuapp.com/webhooks/facebook/webhook).
