@@ -1,0 +1,61 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: en
+
+#   - name: WhitespaceTokenizer # seperates word by white spaces
+#   - name: RegexFeaturizer #Checks for regular expressions and lookup tables
+#   - name: CRFEntityExtractor    #Conditional Random Field Entity Extractor
+#   - name: EntitySynonymMapper  # Checks for synonyms of enitites
+#   - name: CountVectorsFeaturizer #Creates Bag of Words
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 100
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+  - name: MemoizationPolicy
+    # max_history: 3
+    # priority: 3
+  - name: TEDPolicy #Transformer Embedding Dialogue Policy. Better than Keras policy. uses transformers
+    max_history: 5
+    epochs: 100
+  # - name: KerasPolicy #Uses LSTM or RNN architecture to predict next actions
+  #   max_history: 3
+  #   epochs: 200
+  #   validation_split: 0.1
+  #   random_seed: 3
+  - name: MappingPolicy #Maps an action to an intent
+  - name: FormPolicy #Used to collect data for form fields. 
+  - name: "FallbackPolicy"
+    nlu_threshold: 0.3
+    ambiguity_threshold: 0.1
+    core_threshold: 0.3
+    fallback_action_name: "utter_ask_rephrase"
+#  - name: TwoStageFallbackPolicy
+#     nlu_threshold: 0.3
+    # ambiguity_threshold: 0.1
+#     core_threshold: 0.3
+#     fallback_core_action_name: "action_default_fallback"
+#     fallback_nlu_action_name: "action_default_fallback"
+#     deny_suggestion_intent_name: "deny"
+
+
+# All policies have priority: larger number, higher priority. Defaults:
+# 5 FormPolicy
+# 4 FallbackPolicy and TwoStageFallbackPolicy
+# 3 MemoizationPolicy and AugmentedMemoizationPolicy
+# 2 MappingPolicy
+# 1 EmbeddingPolicy, KerasPolicy, SklearnPolicy

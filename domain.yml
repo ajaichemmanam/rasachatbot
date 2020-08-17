@@ -1,0 +1,284 @@
+session_config:
+  session_expiration_time: 60 #value in mins, 0 means session won't expire
+  carry_over_slots_to_new_session: true # set to false to forget slots between sessions
+
+intents:
+- greet
+- goodbye
+# - greet:
+    # triggers: action_greet
+- affirm
+- deny
+- thanks
+- mood_great
+- mood_unhappy
+- bot_challenge
+# - travel
+- travel:
+    use_entities: []
+
+- inform
+- explain
+- chitchat
+- faq
+- quit
+- help
+- restart
+- request_human:
+    triggers: action_human_handoff
+- show_multimedia_examples
+
+entities:
+- location
+- age
+- name
+- email
+- phonenumber
+- address
+- feedback
+- feedback_reason
+- requested_slot
+- multimedia
+
+slots:
+  address:
+    type: unfeaturized
+  age:
+    type: unfeaturized
+  email:
+    type: unfeaturized
+  feedback:
+    type: bool
+  feedback_reason:
+    type: unfeaturized
+  location:
+    type: unfeaturized
+  name:
+    type: unfeaturized
+  phonenumber:
+    type: unfeaturized
+  multimedia:
+    type: categorical
+    values:
+    - audio
+    - video
+    - image
+    - document
+
+  requested_slot:
+    type: categorical
+    values:
+    - name
+    - age
+    - email
+    - address
+    - feedback
+    - location
+    - feedback_reason
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+    
+  # - text: Hey!
+  # - text: Hello! How can I help you?
+  # - text: Hi. What are you looking for?
+  # - text: Hey there!
+  # - text: Hello! How can I help you today?
+  utter_help:
+    - text: I can help you with many things like
+      buttons:
+      - title: Play video
+        payload: Play video
+      - title: Show an image
+        payload: Show an image
+      - title: What's your name?
+        payload: What's your name?
+      - title: I am travelling to India
+        payload: I am travelling to India
+  - text: >
+        I can help you with many things. \n
+        You can ask me things like  \n
+        • Play video
+        • Show an image
+        • What's your name?
+        • I am travelling to India
+  utter_ask_whatelse:
+  - text: What else can I help you with?
+  utter_image:
+  - custom: 
+      - image: https://i.imgur.com/nGF1K8f.jpg
+        description: image description
+    text: 'This is an image'
+  utter_video:
+  - custom: 
+      - video: https://www.youtube.com/watch?v=xcJtL7QggTI
+        description: video description 
+    text: 'This is a video'
+  utter_audio:
+  - custom: 
+      - audio: https://www.youtube.com/watch?v=xcJtL7QggTI
+        description: audio description
+    text: 'This is an audio'
+  utter_document:
+  - custom: 
+      - document: http://africau.edu/images/default/sample.pdf
+        description: document description
+    text: 'This is a sample document'
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  - text: Cheer up
+  utter_happy:
+  - text: Great, carry on!
+  - text: I'm so happy for you
+  utter_ask_rephrase:
+  - text: Sorry, I'm not sure I understand. Can you rephrase?
+  - text: Can you please rephrase? I did not got that.
+  - text: Sorry, I didn't quite understand. Can you rephrase?
+  - text: Sorry, I am not sure of what you said. Can you rephrase?
+  - text: Sorry, I couldn't understand. Can you try a different input?
+  utter_goodbye:
+  - text: Bye
+  - text: Bye 😢
+  - text: goodbye 😢
+  - text: bye bye 😢
+  - text: Goodbye. See you soon.
+  - text: Talk to you later!
+  - text: Have a good day.
+  - text: Until next time!
+  utter_noworries:
+  - text: You're welcome :)
+  - text: You're welcome.
+  - text: My pleasure.
+  - text: With pleasure.
+  - text: You are welcome!.
+  utter_ask_name:
+  - text: May I know your name?
+  - text: What is your name?
+  - text: Please help me with your name
+  utter_ask_age:
+  - text: May I know your age?
+  - text: How old are you?
+  - text: What is your age?
+  utter_ask_email:
+  - text: What is your Email ID?
+  - text: Your Email ID please?
+  - text: Give your mail id please?
+  - text: What's your Email address?
+  utter_ask_address:
+  - text: Please provide your address
+  - text: Where do you live?
+  - text: Give your address please
+  - text: May I know your address
+  utter_bioform_submit:
+  - text: >
+      Thanks for the information.
+      Your Name is {name} aged {age} living in {address}.
+      Your Email {email}
+      Shall I share these info with our travel partner?
+  - text: >
+      Got it. 
+      Your Name is {name} aged {age} living in {address}.
+      Your Email {email}
+      Shall I share these info with our travel partner?
+  - text: >
+      Thanks for the details.
+      Your Name is {name} aged {age} living in {address}.
+      Your Email {email}
+      Shall I share these info with our travel partner?
+
+  # utter_form_submit:
+  # - text: Thanks for the information
+  # - text: Thanks for the details
+  # - text: Got it. Let me check that up for you
+  utter_ask_feedback:
+  # - text: Was that helpful?
+  # - text: Did that help you?
+  # - text: Have I helped you?
+  # - text: Was that useful to you?
+  # - text: Did I help you?
+    - text: Was that helpful?
+      buttons:
+      - title: Yes 👍
+        payload: /affirm
+      - title: No 👎
+        payload: /deny
+        
+  # - buttons:
+  #   - payload: /affirm
+  #     title: Yes
+  #   - payload: /deny
+  #     title: No
+  #   - text: Did that help you?
+  # - buttons:
+  #   - payload: /affirm
+  #     title: Yes
+  #   - payload: /deny
+  #     title: No
+  #   - text: Have I helped you?
+  # - buttons:
+  #   - payload: /affirm
+  #     title: Yes
+  #   - payload: /deny
+  #     title: No
+  #   - text: Was that useful to you?
+  # - buttons:
+  #   - payload: Yes
+  #     title: Yes
+  #   - payload: No
+  #     title: No
+  #   - text: Did I help you?
+  utter_ask_feedback_reason:
+  - text: Can you say why you give this feedback?
+  - text: How can I improve?
+  - text: Please give your suggestions for me to improve
+  - text: Give suggestions for me to improve
+  - text: Please give a reason for your feedback
+  - text: Any improvements for me that you can suggest?
+  - text: Do you mind providing a few suggestions to improve me?
+  - text: How was your experience with me?
+  utter_explain_why_name:
+  - text: We need to know your name, for a personalised experience
+  - text: Your name helps me to provide a more personalised experience for you.
+  utter_explain_why_age:
+  - text: We need to confirm that you are old enough to use our services
+  - text: Our policy says the user should be aged 18 or above. Just to confirm, please
+      provide your age
+  utter_explain_why_email:
+  - text: We need your email so that we can authenticate you and contact if needed
+  - text: It's just for authentication. We promise, we won't spam you.
+  utter_explain_why_phonenumber:
+  - text: We need your phone number, in case we need to contact you.
+  - text: We may need to contact you on this number, just in case. We promise, we
+      won't disturb you.
+  utter_explain_why_feedback:
+  - text: We need your feedback to improve.
+  - text: Your suggestions matters.
+  - text: I know I have a lot improve. Your feedbacks are a great deal for me.
+  - text: We value your feedback.
+  - text: Your feedbacks helps to build a better me.
+  utter_ok:
+  - text: 👍
+  - text: ok
+  utter_ask_continue:
+  - text: Would you like to continue?
+actions:
+- action_multimedia_examples
+- action_greet
+- utter_greet
+- utter_cheer_up
+- utter_happy
+- utter_ask_rephrase
+- utter_ask_name
+- utter_ask_age
+- utter_ask_address
+- utter_bioform_submit
+# - utter_form_submit
+- respond_chitchat
+- respond_faq
+- action_human_handoff
+- action_session_start
+- action_restart
+forms:
+- bio_form
+- feedback_form

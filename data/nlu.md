@@ -1,0 +1,2224 @@
+## lookup:location
+
+data/lookup_tables/countries.txt
+
+## regex:phonenumber
+
+- [0-9]{10}
+
+## regex:name
+
+- /^[a-zA-Z'. -]+\$/
+
+## regex:age
+
+- /^[0-9]+\$/
+
+## regex:email
+
+- /^[_a-z0-9-+]+(\.[_a-z0-9-+]+)_@[a-z0-9-]+(\.[a-z0-9-]+)_(\.[a-z]{2,4})\$/
+<!-- List all synonyms of newyork -->
+
+## synonym: newyork
+<!-- Any input below makes the bot take value "newyork" -->
+- New York
+- New York City
+- NYC
+- NY city
+- the big apple
+
+## intent: help
+- what can you do?
+- help me please
+- get me help
+- What are the things you can do?
+- tell me what you are able to do?
+- help
+- what can I ask you?
+- what do you do?
+- what can you help me with?
+- help me
+- help, what do you do
+- how do I use this
+
+## intent:request_human
+- let me speak to a human
+- can I talk to customer support executive
+- Is anyone online
+- transfer the chat to customer support representative
+- get me someone alive
+- can I talk to people
+- is there anyone that i can talk to
+- Please connect me to someone
+- I want to get in touch with a representative
+- I wanna talk to customer care
+- handoff to human
+- I want a human
+- can I speak to an agent
+- real agent please
+- real human
+- chat with a live agent
+- give me a person please
+- i want to talk to a human
+
+## intent:travel
+- I'd like to go to [america](location)
+- I want to go to [china](location)
+- Can you help me travel to [England](location)
+- I am going to [india](location)
+- travelling to [Australia](location)
+- plan an itinerary in [Brazil](location)
+- I am planning for a trip to [afghanistan](location)
+
+## intent:quit
+- ok then you cant help me
+- that was shit, you're not helping
+- you can't help me
+- you can't help me with what i need
+- i guess you can't help me then
+- ok i guess you can't help me
+- that's not what i want
+- ok, but that doesnt help me
+- this is leading to nothing
+- this conversation is not really helpful
+- you cannot help me with what I want
+- I think you cant help me
+- hm i don't think you can do what i want
+- stop
+- stop go back
+- do you get anything?
+- and you call yourself bot company? pff
+- and that's it?
+- nothing else?
+- I want to stop
+- stop
+- quit
+- sotp
+
+## intent:inform
+- [9874632389](phonenumber)
+- [07894362918](phonenumber)
+- [+917546762918](phonenumber)
+- my phone number is [8743654789](phonenumber)
+- call on [9763847600](phonenumber)
+- I am [22](age) years old
+- I am [45](age)
+- [16](age)
+- I turned [32](age) this year
+- my age is [47](age)
+- I'm [56](age)
+- [maxmeier@firma.de](email)
+- Use this email [bot-fan@bots.com](email)
+- mail me on [maxmeier@firma.de](email)
+- here you go, my mailid is [bot-fan@bots.com](email)
+- my email is [email@rasa.com](email)
+- Correct my email to [testemail@gmail.com](email)
+- [John Doe](name)
+- My name is [Ajai John](name)
+- I'm [Max Mustermann](name)
+- People call me [Max Meier](name)
+- Everyone calls me [Peter](name)
+
+## intent:explain
+- why
+- why is that
+- why do you need it
+- why do you need to know that?
+- could you explain why you need it?
+- why are you asking?
+- tell me why you require that?
+- what are you going to do with it?
+- how are you going to use it?
+- I need some privacy
+- I am concerned with my privacy
+- How are you going to use this information?
+- Why do you need my name?
+- why you need this information
+
+## intent:greet
+- hey
+- hello
+- hi
+- good morning
+- good evening
+- hey there
+- Hi
+- Hey
+- Hi bot
+- Hey bot
+- Hello
+- Good morning
+- hi again
+- hi folks
+- hi Mister
+- hi pal!
+- hi there
+- greetings
+- hello everybody
+- hello is anybody there
+- hello robot
+- hallo
+- heeey
+- hi hi
+- hey hey
+- hello there
+- yo
+- hola
+- hi?
+- hey bot!
+- hello friend
+- hey dude
+- goodmorning
+- goodevening
+- good afternoon
+- anyone online?
+- anybody there?
+
+
+## intent:goodbye
+- bye
+- goodbye
+- see you around
+- see you later
+- cu
+- good by
+- cee you later
+- good night
+- have a nice day
+- bye bye
+- pleasure talking to you
+- good day
+- see you again
+- meet you soon
+- hope to see you soon
+- I have to sign out
+- I have to motor now
+- I have to run
+- I have to run now
+- I have to scoot
+- I have to scoot now
+- I gotta sign out now
+- I have to sign off now
+- I have to log out
+- I have to sign out now
+- I have to skedaddle
+- I have to skedaddle now
+- I have to take off
+- I have to take off now
+- I must depart
+- I have to sign off
+- I have to jet
+- Adieu
+- I gotta skedaddle now
+- I gotta take off
+- I gotta take off now
+- I have to get going
+- I have to get going now
+- I have to motor
+- I have to go now
+- I have to log out now
+- I have to jet now
+- I have to leave
+- I have to leave now
+- I have to log off
+- I have to log off now
+- I need to go
+- I have to go
+- I will take my leave of you
+- I need to get going
+- I need to sign out
+- I need to sign out now
+- I need to skedaddle
+- I need to skedaddle now
+- I need to take off
+- I need to sign off
+- I should be going
+- I need to scoot now
+- I'd better go
+- I'll chat with you later
+- I'll talk to you later
+- I'm about to get going
+- I'm about to get going now
+- I'm about to go
+- I need to take off now
+- I need to log out
+- I gotta sign out
+- I need to go now
+- I need to jet
+- I need to jet now
+- I need to leave
+- I need to leave now
+- I need to sign off now
+- I need to log off now
+- I need to get going now
+- I need to log out now
+- I need to motor
+- I need to motor now
+- I need to run
+- I need to run now
+- I need to scoot
+- I need to log off
+- I am jetting now
+- Goodbye
+- Gotta go
+- I am going
+- I am going now
+- I am going to get going
+- I gotta skedaddle
+- I am jetting
+- Farewell
+- I am leaving
+- I am leaving now
+- I am logging off
+- I am logging off now
+- I am logging out
+- I am logging out now
+- I am going to get going now
+- Catch you on the flip side
+- Adios
+- Alright, I'm outta here
+- Buh bye
+- Bye
+- Bye bye
+- Bye dude
+- Good bye
+- Catch you later
+- G2G
+- Check you later
+- Ciao
+- CYA
+- C-ya
+- Fare thee well
+- I am running off
+- Catch ya later
+- I gotta motor now
+- I am motoring
+- I gotta leave
+- I gotta leave now
+- I gotta log off
+- I gotta log off now
+- I gotta log out
+- I gotta jet
+- I gotta motor
+- I gotta go now
+- I gotta run
+- I gotta run now
+- I gotta scoot
+- I gotta scoot now
+- I gotta sign off
+- I gotta sign off now
+- I gotta log out now
+- I am skedaddling
+- I'm about to jet now
+- I am running off now
+- I am scooting
+- I am scooting now
+- I am signing off
+- I am signing off now
+- I gotta jet now
+- I am signing out now
+- I am motoring now
+- I am skedaddling now
+- I am taking off
+- I am taking off now
+- I gotta get going
+- I gotta get going now
+- I gotta go
+- I am signing out
+- I'm scooting
+- I'm off
+- I'm out
+- I'm out of here
+- I'm out the door
+- I'm outta here
+- I'm about to go now
+- I'm running off now
+- I'm logging out now
+- I'm scooting now
+- I'm signing off
+- I'm signing off now
+- I'm signing out
+- I'm signing out now
+- I'm skedaddling
+- I'm running off
+- I'm jetting now
+- I'm gonna sign off now
+- I'm gonna sign out
+- I'm gonna sign out now
+- I'm gonna skedaddle
+- I'm gonna skedaddle now
+- I'm gonna take off
+- I'm motoring now
+- I'm jetting
+- I'm motoring
+- I'm leaving
+- I'm leaving now
+- I'm logging off
+- I'm logging off now
+- I'm logging out
+- I'm taking off now
+- I'm gonna take off now
+- Signing off
+- I'm skedaddling now
+- See you later
+- See you later bot
+- See you later dude
+- see you later homie
+- See you later, alligator
+- See you around
+- See you!
+- See you
+- Taking off
+- Talk later
+- Talk to ya later
+- Talk to you later
+- Till we meet again
+- Time to end this conversation
+- See you on the flip side
+- Later bud
+- I'm gonna scoot
+- I've got to go
+- I've gotta jet
+- I've gotta take off
+- L8r sk8r
+- Later
+- See you around bud
+- Later bot
+- I'm taking off
+- Later dude
+- Peace out
+- Sayonara
+- See ya around
+- See ya later
+- See ya on the flip side
+- Later alligator
+- I'm going to go
+- I'm going to log off now
+- I'm about to skedaddle now
+- I'm about to take off
+- I'm about to take off now
+- I'm going
+- I'm going now
+- I'm about to sign out now
+- I'm going to get going now
+- I'm about to sign out
+- I'm going to go now
+- I'm going to jet
+- I'm going to jet now
+- I'm going to leave
+- I'm going to leave now
+- I'm gonna sign off
+- I'm going to get going
+- I'm about to motor now
+- I'm about to leave
+- I'm about to leave now
+- I'm about to log off
+- I'm about to log off now
+- I'm about to log out
+- I'm about to skedaddle
+- I'm about to motor
+- I'm going to log out
+- I'm about to run
+- I'm about to run now
+- I'm about to scoot
+- I'm about to scoot now
+- I'm about to sign off
+- I'm about to sign off now
+- I'm about to log out now
+- I'm gonna log out
+- I'm going to log off
+- I'm gonna go now
+- I'm gonna jet
+- I'm gonna jet now
+- I'm gonna leave
+- I'm gonna leave now
+- I'm gonna get going now
+- I'm gonna log off now
+- I'm gonna get going
+- I'm gonna log out now
+- I'm gonna motor
+- I'm gonna motor now
+- I'm gonna run
+- I'm gonna run now
+- I'm about to jet
+- I'm gonna log off
+- I'm going to sign off now
+- I'm going to log out now
+- I'm going to motor
+- I'm going to motor now
+- I'm going to run
+- I'm going to run now
+- I'm going to scoot
+- I'm gonna go
+- I'm going to sign off
+- I'm gonna scoot now
+- I'm going to sign out
+- I'm going to sign out now
+- I'm going to skedaddle
+- I'm going to skedaddle now
+- I'm going to take off
+- I'm going to take off now
+- I'm going to scoot now
+
+## intent:affirm
+
+- yes
+- indeed
+- of course
+- that sounds good
+- correct
+- ye
+- uh yes
+- let's do it
+- yeah
+- um yes
+- that's correct
+- yes yes
+- right
+- yea
+- yes right
+- right on
+- ok
+- okay
+- kk
+- yes sure
+- absolutely
+- for sure
+- yes yes yes
+- definitely
+- that would be good
+- fine
+- I'm ok
+- fine for me
+- looks good
+
+## intent:deny
+
+- no
+- never
+- I don't think so
+- don't like that
+- no way
+- not really
+- no thanks
+- no thank you
+- uh no
+- do you have something else
+- no this does not work for me
+- not today
+- noope
+- nope
+- not what I intended
+- not good
+- that's not what I was looking for
+- doesn't fit for me
+- anything better?
+- not as I expected
+
+## intent:thanks
+
+- um thank you good bye
+- okay cool uh good bye thank you
+- okay thank you good bye
+- you rock
+- and thats all thank you and good bye
+- thank you and good bye
+- thank you goodbye
+- okay thank you goodbye
+- uh thank you good bye
+- thank you
+- okay thank you
+- thanks goodbye
+- ah thank you goodbye
+- thank you very much goodbye
+- thanks
+- uh okay thank you good bye
+- thank you bye
+- um okay thank you good bye
+- Thank you so much
+- Thanks bot
+- Thanks for that
+- cheers
+- cheers bro
+- ok thanks!
+- perfect thank you
+- thanks a bunch for everything
+- thanks for the help
+- thanks a lot
+- amazing, thanks
+- cool, thanks
+- cool thank you
+- I thank you
+- Oh, thank you
+- My sincere thanks
+- My humblest thanks to you
+- Marvelous, thanks
+- Marvelous, thank you kindly
+- Marvelous, thank you
+- Many thanks to you
+- Many thanks
+- Kthx
+- I'm grateful, thanks
+- Ahh, thanks
+- I'm grateful for that, thank you
+- Perfecto, thanks
+- I appreciate you
+- I appreciate that
+- I appreciate it
+- I am very thankful for that
+- How kind, thank you
+- Great, thanks
+- Great, thank you
+- Gracias
+- Gotcha, thanks
+- Gotcha, thank you
+- Awesome thanks!
+- I'm grateful for that, thank you kindly
+- thank you pal
+- Wonderful, thank you!
+- Wonderful, thank you very much
+- Why thank you
+- Thx
+- Thnx
+- That's very kind
+- That's great, thanks
+- That is lovely, thanks
+- That is awesome, thanks!
+- Thanks bot
+- Thanks a lot
+- Okay, thanks!
+- Thank you so much
+- Perfect, thanks
+- Thank you my friend
+- Thank you kindly
+- Thank you for that
+- Thank you bot
+- Thank you
+- Right on, thanks very much
+- Right on, thanks a lot
+- Radical, thanks
+- Rad, thanks
+- Rad thank you
+- Wonderful, thanks!
+- Thanks
+
+## intent:mood_great
+
+- perfect
+- very good
+- great
+- amazing
+- wonderful
+- I am feeling very good
+- I am great
+- I'm good
+- feeling like a king
+- I am amazing
+- I am going to save the world
+- super stoked
+- extremely good
+- so so perfect
+- so good
+- so perfect
+
+## intent:mood_unhappy
+
+- sad
+- very sad
+- unhappy
+- bad
+- very bad
+- awful
+- terrible
+- not very good
+- extremely sad
+- so sad
+- my day was horrible
+- I am sad
+- I don't feel very well
+- I am disappointed
+- super sad
+- I'm so sad
+- not good
+- so saad
+- not feeling well
+
+## intent:bot_challenge
+
+- are you a bot?
+- are you a human?
+- am I talking to a bot?
+- am I talking to a human?
+
+## synonym:audio
+- Audio
+- mp3
+- .mp3
+- song
+- sound
+- music
+
+## synonym:video
+- Video
+- youtube
+- mp4
+- .mp4
+- youtube video
+
+## synonym:image
+- image
+- picture
+- jpg
+- jpeg
+- .png
+- png
+- photo
+
+## synonym:document
+- document
+- pdf
+- .pdf
+- word file
+- .txt
+- text
+
+## intent: show_multimedia_examples
+- show me an [image]{"entity": "multimedia", "value": "image"}
+- play a [video]{"entity": "multimedia", "value": "video"}
+- play [audio]{"entity": "multimedia", "value": "audio"}
+- get me a [document]{"entity": "multimedia", "value": "document"}
+- sample [video]{"entity": "multimedia", "value": "video"} please
+- sample .[pdf]{"entity": "multimedia", "value": "document"} file
+- example [document]{"entity": "multimedia", "value": "document"}
+- play .[mp3]{"entity": "multimedia", "value": "audio"} file
+- show a [youtube video]{"entity": "multimedia", "value": "video"}
+- open a [youtube link][{"entity": "multimedia", "value": "video"}
+- play .[mp4]{"entity": "multimedia", "value": "video"} file
+- show a [text]{"entity": "multimedia", "value": "document"} file
+- show a [video]{"entity": "multimedia", "value": "video"} please
+- give a sample [photo]{"entity": "multimedia", "value": "image"}
+- show an example [picture]{"entity": "multimedia", "value": "image"}
+- play [music]{"entity": "multimedia", "value": "audio"}
+
+## intent:chitchat/ask_body
+
+- Do you ever get hurt?
+- Can you breathe
+- Do you ever breathe
+- can you masticate?
+- Can you burp?
+- Can you chew?
+- Can you crawl?
+- Can you cry?
+- Can you dream
+- Can you eat?
+- Can you fart?
+- Do you breathe
+- Can you get tired?
+- Can you yawn?
+- Can you pee?
+- Can you poop?
+- Can you sneeze?
+- Can you sweat?
+- Can you throw up?
+- Can you vomit?
+- Do you ever pee?
+- Can you get hurt?
+- Do you sweat?
+- Do you have skin?
+- Do you have teeth?
+- Do you have toes?
+- Do you masticate?
+- Do you pee?
+- Do you poop?
+- Do you ever get tired?
+- Do you sneeze?
+- Do you have hair?
+- Do you throw up?
+- Do you vomit?
+- Do you yawn?
+- Don't you ever masticate?
+- Don't you ever sleep?
+- Do you have a stomach?
+- Do you have intestines?
+- Do you sleep?
+- Do you get tired?
+- Do you ever poop?
+- Do you ever sneeze?
+- Do you ever sweat?
+- Do you ever throw up?
+- Do you ever vomit?
+- Do you ever walk
+- Do you ever yawn?
+- Do you have lungs?
+- Do you get hurt?
+- Do you have legs?
+- Do you get zits?
+- Do you have a liver?
+- Do you have arms?
+- Do you have eyes?
+- Do you have fingernails?
+- Do you have fingers?
+- Do you have bowels?
+- Do you fart?
+- Do you ever chew?
+- Do you burp?
+- Do you chew?
+- Do you crawl?
+- Do you cry?
+- Do you dream
+- Do you eat?
+- do you ever masticate?
+- Do you ever burp?
+- Can you walk?
+- Do you ever crawl?
+- Do you ever cry?
+- Do you ever dream
+- Do you ever eat?
+- Do you ever fart?
+
+## intent: chitchat/ask_botname
+
+- To whom am I speaking?
+- Introduction please
+- Introductions
+- So how should I address you?
+- So how should I refer to you?
+- So what do you like to be called?
+- So what is your name?
+- So what should I call you?
+- So what would you like me to call you
+- Can you introduce yourself
+- So who are you?
+- How would you like me to call you?
+- What are you called?
+- What can I address you?
+- What can I call you
+- What can I call you?
+- What can I refer to you?
+- What do I call you?
+- What do you go by?
+- What do you want me to address you as?
+- What do you want me to address you?
+- So what's your name?
+- How do you want me to address you as?
+- Can you tell me how to refer to you?
+- Can you tell me what I should call you?
+- Can you tell me what your name is?
+- Can you tell me your name?
+- Do you have a designation?
+- Do you have a name?
+- Do you have a title?
+- Do you have an official name?
+- How can I address you?
+- Introduce yourself
+- How can I refer to you?
+- How would you like me to refer to you?
+- How do you want me to address you?
+- How do you want me to call you?
+- How do you want me to refer to you?
+- how is your name
+- How should I address you?
+- How should I call you?
+- How should I refer to you?
+- How would you like me to address you?
+- What do your friend call you?
+- How can I call you?
+- What do they call you?
+- What do you want me to call you?
+- What would you say your name is?
+- I'd like to know your name
+- I'd like to know what to call you
+- I want to know your name
+- I want to know what to call you
+- What is your first name?
+- What is your last name?
+- I'm going to need to know your name
+- What name to you like to be called?
+- You got a name?
+- What do you like to be called?
+- What name do you like to be called?
+- I don't know your name.
+- I don't know what to call you.
+- I'm not sure what to call you.
+- I can't figure out what to call you.
+- It's not clear to me what your name is.
+- What name do you use?
+- Name please
+- What name do you like to use?
+- What name do you go by?
+- What's your handle?
+- What name should I use for you?
+- What is your name?
+- What is your program name?
+- What should I address you?
+- What should I call you?
+- What should I refer to you?
+- What to people call you?
+- What would you like me to address you?
+- What would you like me to call you?
+- And your name is?
+- What's your designation?
+- What do you want me to refer to you?
+- What's your name?
+- Who are you?
+- Who do you want me to address you as?
+- who r u
+- With whom am I chatting?
+- With whom am I speaking?
+- With whom am I talking?
+- Who are you exactly?
+- What name do you prefer?
+- What would you like me to refer to you?
+
+## intent: chitchat/ask_botage
+
+- Are you old?
+- I bet you're old
+- How old are you?
+- how long have you been around?
+- How long have you been alive?
+- How long has it been since you were born
+- How long ago were you born?
+- Do you have an age?
+- Do you have a birthday?
+- Are you younger than me?
+- Are we the same age?
+- are you older than me?
+- What age are you?
+- Are you my age?
+- Are you in your teens?
+- Are you an adult?
+- Are you a teenager?
+- Are you a senior?
+- Are you a kid?
+- Are you a grownup?
+- Are you a grown up?
+- Are you a baby?
+- Are you young?
+- When were you born?
+- Who's younger, you or me?
+- Who's older?
+- Who's older, you or me?
+- Who is older, me or you?
+- Which year were you born in?
+- Which one of us is younger?
+- Which one of us is older?
+- Which of us is younger?
+- Which of us is older?
+- I bet you're young
+- When's your birthday?
+- In which year were you born?
+- When is your birthday?
+- What's your birthday?
+- What's your age?
+- What year were you born?
+- What month is your birthday?
+- What month is your birthday in?
+- What is your birthday?
+- What is your age?
+- What day is your birthday?
+- Who's younger?
+- Which month is your birthday?
+
+## intent: chitchat/ask_botlocation
+
+- I would like to know where you are
+- Do you live in the cloud?
+- Do you live near me?
+- Do you live nearby?
+- Explain where you are
+- How can I find you?
+- Are you far away?
+- I want to know where your home is
+- Do you live in a computer?
+- Share your location
+- Share your location with me
+- So where are you from?
+- Tell me where you are located
+- What are your coordinates?
+- What country are you from?
+- I want to know where you live
+- Can you tell me which city you're in?
+- Are you in the cloud?
+- Are you local?
+- Are you near me?
+- Are you near?
+- Are you nearby?
+- Can you tell me your address?
+- Do you live in a server?
+- Can you tell me where you are?
+- Do you live in a house?
+- Can you tell me your location?
+- Describe where you are
+- Do you have a house?
+- Do you have a physical location?
+- Do you have an address?
+- What is your location?
+- Can you tell me what city you're in?
+- Tell me what city you're in
+- What is the location of your home?
+- Do you have a home?
+- Where is your humble abode?
+- Where do you go when you leave work?
+- What town are you from?
+- What town do you live in?
+- Where are you in the world?
+- What country do you live in?
+- Where do you reside?
+- Tell me what country you're in
+- Tell me what country you live in
+- Tell me what city you live in
+- Are you in a call center?
+- Are you at a call center?
+- What's your 20?
+- What city do you live in?
+- Where do you live?
+- What's your 20 over
+- What is your physical location?
+- What state are you from?
+- What state are you in?
+- Where are you from?
+- Where are you located?
+- Do you live somewhere?
+- Where can I find you?
+- What is your address?
+- Where in the world are you?
+- Where is your home?
+- Where's your house?
+- Which city are you in?
+- Which country are you in?
+- Which state are you in?
+- Where are you?
+
+## intent: chitchat/ask_weather
+
+- how's weather?
+- is it sunny where you are?
+- is it a rainy day?
+
+## intent: chitchat/ask_botintelligence
+- Do you think I'm the smartest?
+- Between you or me, who is the most smart?
+- Do you think you're the brightest
+- Do you think you're smarter than me?
+- Do you think you're smarter
+- Do you think you're more knowledgeable than me?
+- Do you think you're more knowledgeable
+- Do you think you're more intelligent than me?
+- Do you think you're more intelligent
+- Do you think you're the most smart
+- Do you think you're more clever
+- Do you think you're the smartest
+- Do you think I'm the smartest than you?
+- Do you think I'm the most intelligent?
+- Do you think I'm smarter?
+- Do you think I'm smarter than you?
+- Do you think I'm more knowledgeable than you?
+- Do you think I'm more intelligent than you?
+- Do you think I'm more clever than you?
+- Do you think I'm brighter?
+- I'm definitely more intelligent
+- Do you think you're more clever than me?
+- I'm clearly smarter
+- Am I brighter than you?
+- I'm definitely more clever
+- I'm definitely cleverest
+- I'm definitely brighter than you
+- I'm cleverest
+- I'm clearly the smartest
+- I'm clearly the most smart
+- I'm clearly the most intelligent
+- Do you think you're the most intelligent
+- I'm clearly smarter than you
+- Between you or me, who is the most intelligent?
+- I'm clearly more knowledgeable than you
+- I'm clearly more knowledgeable
+- I'm clearly more intelligent than you
+- I'm clearly more intelligent
+- I'm clearly more clever than you
+- I'm clearly more clever
+- I'm clearly cleverest
+- I'm clearly brighter than you
+- Do you think you're the smartest than me?
+- I'm clearly the brightest
+- Between the two of us who is cleverest, you or me?
+- Between you or me, who is the smartest?
+- Between the two of us who is more knowledgeable, you or me?
+- Between the two of us who is more knowledgeable, me or you?
+- Between the two of us who is more intelligent?
+- Between the two of us who is more intelligent, you or me?
+- Between the two of us who is more intelligent, me or you?
+- Between the two of us who is more clever?
+- Between the two of us who is more clever, you or me?
+- Between the two of us who is smarter, me or you?
+- Between the two of us who is cleverest?
+- Between the two of us who is smarter, you or me?
+- Between the two of us who is cleverest, me or you?
+- Are you smarter? 
+- Are you smarter than me?
+- Am I the smartest?
+- Am I the brightest?
+- Am I smarter? 
+- Am I smarter than you? 
+- Am I more intelligent? 
+- Am I more brilliant?
+- Between the two of us who is more clever, me or you?
+- Between the two of us who is the most smart?
+- Between you or me, who is the brightest?
+- Between you or me, who is smarter?
+- Between you or me, who is smarter, me or you?
+- Between you or me, who is more knowledgeable?
+- Between you or me, who is more intelligent?
+- Between you or me, who is more clever?
+- Between you or me, who is cleverest?
+- Between the two of us who is the smartest?
+- Between the two of us who is more knowledgeable?
+- Between the two of us who is the smartest, me or you?
+- I'm definitely more intelligent than you
+- Between the two of us who is the most smart, you or me?
+- Between the two of us who is the most smart, me or you?
+- Between the two of us who is the most intelligent?
+- Between the two of us who is the most intelligent, you or me?
+- Between the two of us who is the most intelligent, me or you?
+- Between the two of us who is the brightest?
+- Between the two of us who is the brightest, you or me?
+- Between the two of us who is the brightest, me or you?
+- Between the two of us who is smarter?
+- Between the two of us who is the smartest, you or me?
+- Who is cleverest?
+- Which of us is the smartest?
+- Who's cleverest?
+- Who is the smartest?
+- Who is the most smart?
+- Who is the most intelligent?
+- Who is the brightest?
+- Who is smarter?
+- Who is more knowledgeable?
+- Who's more intelligent?
+- Who is more clever?
+- Who's more knowledgeable?
+- Which one of us is the smartest?
+- Which one of us is the most smart?
+- Which one of us is the most intelligent?
+- Which one of us is the brightest?
+- Which one of us is smarter?
+- Which one of us is more knowledgeable?
+- Which one of us is more intelligent?
+- Which one of us is more clever?
+- I'm definitely more clever than you
+- Who is more intelligent?
+- You're more knowledgeable
+- You're the most smart
+- You're the most intelligent
+- You're the brightest
+- You're smarter
+- You're obviously the smartest
+- You're obviously the most intelligent
+- You're obviously the brightest
+- You're obviously smarter
+- Who's more clever?
+- You're obviously more intelligent
+- Which of us is the most smart?
+- You're more intelligent
+- You're more clever
+- You're cleverest
+- Who's the smartest?
+- Who's the most smart?
+- Who's the most intelligent?
+- Who's the brightest?
+- Who's smarter?
+- Who's smarter, me or you?
+- You're obviously more knowledgeable
+- I'm more clever than you
+- Which one of us is cleverest?
+- I'm obviously more intelligent
+- I'm obviously more clever than you
+- I'm obviously more clever
+- I'm obviously cleverest
+- I'm obviously brighter than you
+- I'm more knowledgeable than you
+- I'm more knowledgeable
+- I'm obviously more knowledgeable
+- I'm more intelligent
+- I'm obviously more knowledgeable than you
+- I'm more clever
+- I'm definitely the smartest
+- I'm definitely the most smart
+- I'm definitely the most intelligent
+- I'm definitely the brightest
+- I'm definitely smarter than you
+- I'm definitely smarter
+- I'm definitely more knowledgeable than you
+- I'm definitely more knowledgeable
+- I'm more intelligent than you
+- I'm the brightest
+- Which of us is the most intelligent?
+- Which of us is the brightest?
+- Which of us is smarter?
+- Which of us is more knowledgeable?
+- Which of us is more intelligent?
+- Which of us is more clever?
+- Which of us is cleverest?
+- I'm the smartest
+- I'm obviously more intelligent than you
+- I'm the most intelligent
+- You're the smartest
+- I'm the brighter than you
+- I'm smarter than you
+- I'm smarter
+- I'm obviously the smartest
+- I'm obviously the most smart
+- I'm obviously the most intelligent
+- I'm obviously the brightest
+- I'm obviously smarter than you
+- I'm obviously smarter
+- I'm the most smart
+
+## intent: chitchat/ask_botjob
+- Do you have an occupation?
+- Do you have a job?
+- What do you do for employment?
+- What do you do for work?
+- What is your occupation?
+- What's your job? 
+- What's your occupation?
+- Do you have a job to do?
+- Are you employed?
+- What work do you do?
+- What's your profession?
+- Do you have a profession?
+- What do you do for a living?
+- What's your livelihood?
+- How do you earn your keep?
+- What's your career?
+- What line of work are you in?
+- What job do you do?
+
+## intent: chitchat/ask_jokes
+
+- How come you only have one joke?
+- I would enjoy a different joke
+- Got a different joke?
+- Got a new joke?
+- Got a second joke?
+- Got any different jokes?
+- Got any other jokes?
+- Hit me with a new joke
+- Hook me up with a different joke
+- How about a different joke
+- How about a new joke
+- How about a second joke
+- How about another joke
+- Don't you know other jokes?
+- How bout another joke?
+- Don't you have any other jokes?
+- How come you only know one joke?
+- I already heard that one
+- I heard that one before
+- I need a better joke
+- I need a different joke
+- I need a funnier joke
+- I need a new flavor of joke
+- I need a new joke
+- I want a better joke
+- I want a brand new joke
+- I want a different joke
+- I want a different kind of joke
+- Alternate joke
+- How bout a new joke?
+- Can you tell me another joke
+- Alternate joke please
+- Another joke
+- another joke, please
+- Any different jokes?
+- Any new jokes
+- Any other jokes?
+- Are there any other jokes that you know of?
+- Are there any other jokes?
+- better joke
+- better joke please
+- Bot I need a new joke
+- Can you tell me a different joke
+- Give me an alternative joke
+- Can you tell me a second joke?
+- I would like a fresh joke
+- Can you tell me any other jokes?
+- Come on you have a different joke
+- different joke
+- different joke, please
+- Do you have a variety of jokes?
+- Do you have an arsenal of jokes?
+- Do you know a bunch of good jokes?
+- Do you know a different joke?
+- Do you know a great many jokes?
+- Do you know another joke?
+- Do you know any new jokes?
+- Do you know any other jokes?
+- Don't you have any new jokes?
+- Can you tell me a new joke
+- What other jokes do you have up your sleeve?
+- I want a funnier joke
+- u know any other jokes?
+- Wanna share a different joke?
+- Wanna share a new joke?
+- Wanna share another joke?
+- Want to share a different joke?
+- Want to share a new joke?
+- Want to share another joke?
+- What different jokes do you know?
+- What is a different joke?
+- What is another joke?
+- What other jokes are there?
+- u know a second joke?
+- What other jokes can you tell?
+- u know a new joke?
+- What other jokes do you have?
+- What other jokes do you know of?
+- What other jokes do you know?
+- What's a different joke?
+- What's another joke you know?
+- What's another joke?
+- Why did you tell me the same joke?
+- Will you tell me a second joke?
+- Will you tell me a different joke
+- Will you tell me a new joke
+- Will you tell me another joke
+- You already told me that one
+- You got some jokes you haven't told me?
+- What other jokes can you say?
+- Tell a different joke
+- I'd really like to hear a new joke
+- It's time for a brand new joke
+- It's time for a new kind of joke
+- I've already heard that one before
+- new joke
+- new joke please
+- next joke
+- next joke, please
+- Please tell me another joke
+- Say a different joke
+- Say a new joke
+- Say another joke
+- u know another joke?
+- Share a different joke with me
+- You must have different kinds of jokes
+- Tell a new joke
+- Tell another joke
+- Tell me a better joke
+- Tell me a different joke.
+- Tell me a different kind of joke
+- Tell me a dirty joke
+- Tell me a funnier joke
+- Tell me a new joke
+- Tell me a pirate joke
+- Tell me a science joke
+- Tell me a third joke
+- Tell me another joke.
+- u know a different joke?
+- Share a different joke
+
+## intent: chitchat/ask_family
+
+- How many sisters do you have?
+- Do you have family?
+- Do you have grandparents?
+- Do you have parents?
+- Do you have relatives?
+- Do you have siblings?
+- Do you have sisters?
+- Do you have uncles?
+- Do you like your family?
+- Do you see your family often?
+- Do you spend time with your family?
+- How big is your family?
+- How many brothers do you have?
+- Are you a family person?
+- How many siblings do you have?
+- Do you have aunts?
+- I'm curious about your family
+- I'm curious if you have any family
+- Is your dad still alive?
+- Is your grandma still alive?
+- Is your grandpa still alive?
+- Is your mom still alive?
+- Just wondering if you've got a family
+- Tell me about those parents of yours
+- Tell me about your dad
+- Tell me about your family
+- Tell me about your father
+- Tell me about your mom
+- Tell me about your mother
+- How many people are in your family?
+- Do you have any aunties?
+- Are you close with your brothers?
+- Are you close with your dad?
+- Are you close with your family?
+- Are you close with your mom?
+- Are you close with your sisters?
+- Are your parents still alive?
+- Do you care about your family?
+- Do you have a bro?
+- Do you have a brother?
+- Do you have a dad?
+- Do you have a family?
+- Do you have a mom?
+- Do you have a sis?
+- Do you have cousins?
+- Do you have any parents?
+- Tell me all about your siblings
+- Do you have aunties?
+- Do you have any uncles?
+- Do you have any sisters?
+- Do you have any sibs?
+- Do you have a sister?
+- Do you have any relatives?
+- Do you have an extended family?
+- Do you have any grandparents?
+- Do you have any family?
+- Do you have any cousins?
+- Do you have any brothers?
+- Do you have any aunts?
+- Do you have brothers?
+- Do you have any siblings?
+- Who's your grandfather?
+- Tell me about your parents
+- Who is your momma?
+- Who is your mommy?
+- Who is your mother?
+- Who is your papa?
+- Who is your poppa?
+- Who is your sister?
+- Who is your uncle?
+- Who's your aunt?
+- Who's your auntie?
+- Who's your brother?
+- Who's your cousin?
+- Who's your dad?
+- Who is your mama?
+- Who's your mommy?
+- Who are you related to?
+- How many members in your family?
+- You got cousins?
+- Who's your uncle?
+- Who's your sister?
+- Who's your daddy?
+- Who's your mother?
+- Who's your father?
+- Who's your mom?
+- Who's your mama?
+- Who's your grandpa?
+- Who's your grandmother?
+- Who's your grandma?
+- Who is your grandpa?
+- Who's your papa?
+- What's your family's name?
+- Are you related to anyone?
+- What is your auntie's name?
+- What is your aunt's name?
+- What is your brother's name?
+- What is your cousin's name?
+- What is your family's name?
+- What is your sister's name?
+- What is your uncle's name?
+- What's good with your family?
+- What's your auntie's name?
+- What's your aunt's name?
+- What's your brother's name?
+- What's your cousin's name?
+- Who is your mom?
+- Who is your brother?
+- Who is your grandmother?
+- Who is your grandma?
+- Who is your grandfather?
+- Who is your father?
+- Who is your daddy?
+- What's your dad's name?
+- Who is your cousin?
+- What's your family situation
+- Who is your auntie?
+- Who is your aunt?
+- What's your uncle's name?
+- What's your sister's name?
+- What's your mom's name?
+- Tell me all about your family
+- Who is your dad?
+
+## intent: chitchat/ask_myself
+
+- Please ask something about myself
+- Is there anything I can tell you about myself?
+- Is there anything I can tell you about who I am?
+- Is there anything you want to know about me?
+- Is there something you want to know about me?
+- Please ask anything
+- Please ask anything about me
+- Please ask anything about myself
+- Please ask me anything
+- Please ask me anything about me
+- Please ask me anything about myself
+- Please ask me something
+- Please ask me something about me
+- Please ask me something about myself
+- AMA
+- What can I tell you about me?
+- What do you want me to teach you about?
+- What do you want me to teach you about me?
+- What do you want me to inform you who I am?
+- What do you want me to inform you about?
+- What do you want me to inform you about me?
+- Please ask something
+- What can I tell you about?
+- Please ask something about me
+- What can I teach you who I am?
+- What can I teach you about?
+- What can I teach you about me?
+- What can I inform you about?
+- What can I inform you about me?
+- Don't you want to know anything about me?
+- What can I tell you who I am?
+- Can you ask anything about me?
+- How about asking something about me?
+- Can you ask me something about me?
+- Can you ask me anything about myself?
+- Can you ask me anything about me?
+- Can you ask me anything?
+- Can you ask me something?
+- Can you ask anything about myself?
+- Can you ask me why I'm here?
+- Can you ask anything?
+- Ask me something
+- Ask me anything
+- Ask me about something
+- Ask me about anything
+- Ask me a question
+- Can you ask me a question?
+- Do you want to ask me anything?
+- What do you want me to tell you about?
+- Don't you want to know about me?
+- Don't you want to ask me something?
+- Don't you want to ask me anything
+- Don't you want to ask anything about me?
+- Can you ask me something about myself?
+- Do you want to ask me something?
+- How about asking me something?
+- Do you want me to tell you anything?
+- Could you ask me something?
+- Could you ask me about something?
+- Can you ask something about myself?
+- Can you ask something about me?
+- Can you ask something?
+- Do you want to know anything about me?
+- Do you have any questions about me?
+- Would you ask me something
+- Any questions for me?
+- Is there anything you want to ask me?
+- Just ask me a question
+- Is there anything I can tell you about me?
+- What's something you want to ask me?
+- What questions do you have for me?
+- What are some questions for me?
+- Do you have any questions for me?
+- Would you ask something about myself
+- Would you ask something about me
+- Would you ask something
+- Would you ask me something about myself
+- What do you want me to teach you who I am
+- What's something you want to know about me?
+- Why don't you ask me questions?
+- I want you to ask me questions
+- I want you to ask about me
+- I want you to ask me a question
+- What do you want to know about me?
+- Can you ask questions?
+- Got any questions for me?
+- Why don't you ask me anything?
+- Would you ask me anything about myself
+- Why don't you ever ask me questions?
+- Now, it's your turn to ask questions
+- How about you ask me questions?
+- Want to learn more about me?
+- Want to ask any questions about me?
+- You have any questions for me?
+- How about you ask me something?
+- What do you want to learn about me
+- Would you ask me something about me
+- Why do I have to ask all the questions?
+- Why am I the only one asking questions?
+- What would you like to learn about me
+- What would you like to learn about
+- Will you ask anything about me
+- What would you like to know about
+- Will you ask anything about myself
+- What do you want to learn about
+- What do you want to know about me
+- What do you want to know about
+- What do you want to ask me about?
+- What do you want me to tell you who I am?
+- Ask me questions
+- What would you like to know about me
+- Will you ask something
+- Would you ask me anything about me
+- Would you ask me anything
+- Would you ask anything about myself
+- Would you ask anything about me
+- Would you ask anything
+- Will you ask anything
+- Will you ask something about me
+- What do you want me to tell you about me?
+- Will you ask me something about myself
+- Will you ask me something about me
+- Will you ask me something
+- Will you ask me anything about myself
+- Will you ask me anything about me
+- Will you ask me anything
+- Will you ask something about myself
+
+## intent: chitchat/ask_reportee
+
+- What's your director's name?
+- What is the name of your boss
+- What's the name of your supervisor
+- Who tells you what to do?
+- What's the name of your director?
+- What's the name of your boss?
+- What is your supervisor's name
+- What is your manager's name?
+- What is your director's name?
+- What is your boss' name?
+- What is the name of your supervisor
+- What is the name of your manager?
+- What is the name of your manager
+- What is the name of your director?
+- What is the name of your director
+- What is the name of your boss?
+- What's your boss' name?
+- Who's calling the shots?
+- Do you have a boss?
+- Who call the shots?
+- You don't answer to anyone?
+- Does anyone tell you what to do?
+- Does anyone boss you around?
+- Who's your master?
+- You report to anyone?
+- So no one tells you what to do?
+- Is there anyone you listen to?
+- Is there anyone you answer to?
+- Who runs you?
+- Is there anyone who tells you what to do?
+- Who is your master?
+- Who runs the show?
+- Who supervises you?
+- Who's running the show?
+- Who bosses you?
+- You've got a boss?
+- Do you answer to anyone?
+- You have a boss?
+- Who's your supervisor
+- Who's your manager?
+- Who's your director?
+- Who's your boss?
+- Who's in charge?
+- Who's in charge of you?
+- Whom do you serve?
+- You don't have a boss?
+- You answer to anyone?
+
+## intent: chitchat/ask_ability
+
+- Can you jump rope?
+- Can you draw something?
+- Can you paint my house?
+- Can you mow the lawn?
+- Can you make me a sandwich?
+- Can you make a sculpture?
+- Can you make a pot of tea?
+- Can you make a cup of coffee?
+- Can you make a call?
+- Can you listen to the radio?
+- Can you learn?
+- Can you plant a tree?
+- Can you jump?
+- Can you plant a vegetable garden?
+- Can you go to the moon?
+- Can you go to the doctor?
+- Can you go on vacation?
+- Can you go for a walk?
+- Can you get a haircut?
+- Can you fly?
+
+## intent: chitchat/ask_tech
+- How do you feel about artificial intelligence?
+- Are you a fan of tech?
+- What is your opinion about AI?
+- What do you think about technology?
+- What do you think about AI?
+- How do you feel about the singularity?
+- How do you feel about technology?
+- How do you feel about tech?
+- What is your opinion about bots?
+- How do you feel about bots?
+- What is your opinion about tech companies?
+- How do you feel about AI?
+- Are you interested in technology?
+- Are you interested in tech?
+- Are you interested in tech companies?
+- Are you interested in bots?
+- Are you interested in artificial intelligence?
+- Are you interested in AI?
+- How do you feel about tech companies?
+- What is your take on artificial intelligence?
+- What should I know about tech?
+- What should I know about tech companies?
+- What should I know about bots?
+- What should I know about artificial intelligence?
+- What should I know about AI?
+- What is your take on technology?
+- What is your take on tech?
+- What is your opinion about artificial intelligence?
+- What is your take on bots?
+- What should I know about technology?
+- What is your take on AI?
+- What is your opinion of tech?
+- What is your opinion of tech companies?
+- What is your opinion of artificial intelligence?
+- What is your opinion of AI?
+- What is your opinion about technology?
+- What is your opinion about tech?
+- What is your take on tech companies?
+
+## intent: chitchat/ask_gender
+
+- Please tell me if you're a girl
+- Are you a bot with a gender?
+- Do you have a sex?
+- Are you cisgender?
+- Are you a boy?
+- Are you a girl or a boy?
+- Are you a girl?
+- Are you a guy or a girl?
+- Are you a guy?
+- Are you a man or a woman?
+- Are you trans?
+- Are you a woman?
+- Please tell me if you're trans
+- Are you female?
+- Are you gendered?
+- Are you genderfluid?
+- Are you genderqueer?
+- Are you male or female?
+- Are you male?
+- Are you a man?
+- You're queer?
+- Please tell me if you're a guy
+- You're a man
+- You're genderfluid
+- You're nonbinary
+- You're cisgender
+- You're trans
+- You're a boy
+- You're genderqueer
+- You're a girl
+- You have a gender?
+- Where are you on the gender spectrum?
+- Are you agender?
+- Are you gender neutral?
+- You're agender
+- You're gender neutral
+- You're transgender
+- What's your gender?
+- Please tell me your gender
+- Tell me about your gender
+- Tell me all about your gender
+- What gender do you identify with?
+- What is your gender?
+- What is your sex?
+- You're a woman
+- What's your gender identity?
+- Are you bigender?
+- What's your sex?
+- Where do you fall in terms of gender
+- You a girl?
+- You a guy?
+- You got a gender?
+- Are you on the gender spectrum?
+- What's going on with your gender?
+
+## intent: chitchat/ask_otherbots
+
+- Do you get along with Google Assistant?
+- Do you ever talk to other bots?
+- Do you ever talk with Alexa?
+- Do you ever talk with Bixby?
+- Do you ever talk with chatbots?
+- Do you ever talk with Cortana?
+- Do you ever talk with Google Assistant?
+- Do you ever talk with other bots?
+- Do you get along with Alexa?
+- Do you get along with Bixby?
+- Do you know Google?
+- Do you get along with Cortana?
+- Do you ever talk to chatbots?
+- Do you get along with other bots?
+- Do you know Alexa?
+- Do you know any other chatbots?
+- Do you know Bixby?
+- Do you know Cortana?
+- Do you know Cortana?
+- Do you know Eliza?
+- Do you know Google Assistant?
+- Are you familiar with Alexa?
+- Do you get along with chatbots?
+- Do you and Google hang out?
+- Are you familiar with Cortana?
+- Are you familiar with Google?
+- Are you familiar with Siri?
+- Are you friends with Alexa?
+- Are you friends with Bixby?
+- Are you friends with Cortana?
+- Are you friends with Google?
+- Are you friends with other bots?
+- Are you friends with Siri?
+- Do you ever talk to Google Assistant?
+- Do you and Cortana hang out?
+- Do you ever talk to Cortana?
+- Do you and Siri hang out?
+- Do you ever chat with Alexa?
+- Do you ever chat with Bixby?
+- Do you ever chat with chatbots?
+- Do you ever chat with Cortana?
+- Do you ever chat with Google Assistant?
+- Do you ever chat with other bots?
+- Do you ever talk to Alexa?
+- Do you ever talk to Bixby?
+- Do you know HAL?
+- Do you and Alexa hang out?
+- What can you tell me about Siri?
+- Have you met Google Assistant?
+- Have you met Google?
+- Have you met HAL?
+- Have you met Siri?
+- Have you met the Google Assistant?
+- What can you tell me about Alexa?
+- What can you tell me about Bixby?
+- What can you tell me about chatbots?
+- What can you tell me about Cortana?
+- Do you know Google Home?
+- What can you tell me about other bots?
+- Have you met Cortana?
+- What do you know about Alexa?
+- What do you know about Bixby?
+- What do you know about chatbots?
+- What do you know about Cortana?
+- What do you know about Google Assistant?
+- What do you know about other bots?
+- What other assistants do you know about?
+- What other bots do you know about?
+- What other bots do you know?
+- What can you tell me about Google Assistant?
+- Have you ever met Bixby?
+- Do you know of Alexa?
+- Do you know of Cortana?
+- Do you know of Google?
+- Do you know of Siri?
+- Do you know other bots?
+- Do you know other chatbots?
+- Do you know other digital agents?
+- Do you know Siri?
+- Do you know Siri?
+- Have you met Eliza?
+- Do you know Zo?
+- Have you met Cortana?
+- Have you ever met Cortana?
+- Have you ever met Eliza?
+- Have you ever met Google Assistant?
+- Have you ever met HAL?
+- Have you ever met Siri?
+- Have you ever met the Google Assistant?
+- Have you ever met Zo?
+- Have you met Alexa?
+- Have you met Bixby?
+- What other chatbots do you know?
+- Do you know the Google Assistant?
+
+## intent: chitchat/ask_suicide
+
+- I think I'm going to overdose
+- I think I'm going to drown
+- I think I'm going to end it all
+- I think I'm going to end my life
+- I think I'm going to hang myself
+- I think I'm going to hurt myself
+- I think I'm going to jump off a bridge
+- I want to drown
+- I think I'm going to kill myself with a gun
+- I think I'm going to commit suicide
+- I think I'm going to shoot myself
+- I think I'm going to take pills
+- I want the pain to end
+- I want to be dead
+- I want to commit suicide
+- I want to cut myself
+- I plan to kill myself today
+- I think I'm going to kill myself
+- I plan to shoot myself this month
+- Being dead would be a relief
+- I plan to kill myself with a gun this month
+- I plan to kill myself with a gun this week
+- I plan to kill myself with a gun today
+- I plan to overdose soon
+- I plan to overdose this month
+- I plan to overdose this week
+- I think I'm going to die
+- I plan to shoot myself soon
+- I think I'm going to cut myself
+- I plan to shoot myself this week
+- I plan to shoot myself today
+- I plan to take pills soon
+- I plan to take pills this month
+- I plan to take pills this week
+- I plan to take pills today
+- I want to end it all
+- I plan to overdose today
+- I'm better off dead
+- I'm about to hang myself
+- I'm about to hurt myself
+- I'm about to jump off a bridge
+- I'm about to kill myself
+- I'm about to kill myself with a gun
+- I'm about to overdose
+- I want to die
+- I'm about to take pills
+- I'm about to drown
+- I'm feeling suicidal
+- I'm going to be dead soon
+- I'm going to commit suicide
+- I'm going to commit suicide soon
+- I'm going to commit suicide this month
+- I'm going to commit suicide this week
+- I'm going to commit suicide today
+- I'm about to shoot myself
+- I welcome death
+- I want to end my life
+- I want to hang myself
+- I want to hurt myself
+- I want to jump off a bridge
+- I want to kill myself
+- I want to kill myself with a gun
+- I want to overdose
+- I'm about to end my life
+- I want to shoot myself
+- I'm about to end it all
+- I wish I were dead
+- I won't be alive much longer
+- I'd be better off dead
+- I'm about to commit suicide
+- I'm about to cut myself
+- I'm about to die
+- I plan to kill myself this week
+- I want to overdose on pills
+- I need to hurt myself
+- I need the pain to end
+- I need to commit suicide
+- I need to cut myself
+- I need to die
+- I need to drown
+- I need to end it all
+- I plan to commit suicide this month
+- I need to hang myself
+- I just want it to end
+- I need to jump off a bridge
+- I need to kill myself
+- I need to kill myself with a gun
+- I need to overdose
+- I need to shoot myself
+- I need to take pills
+- I plan to kill myself with a gun soon
+- I need to end my life
+- I can't wait to die
+- Everyone says I should just die
+- Everyone says I should kill myself
+- Everyone thinks I should commit suicide
+- Everyone thinks I should kill myself
+- Everyone thinks I'm a burden
+- Everyone wants me to commit suicide
+- Everyone wants me to die
+- I just want to end it all
+- I can't wait to commit suicide
+- I just want to die
+- I can't wait to kill myself
+- I feel like dying
+- I feel like I should kill myself
+- I feel like killing myself
+- I feel like offing myself
+- I just want it all to be over
+- I plan to commit suicide this week
+- I can't go on anymore
+- I plan to hurt myself this week
+- I plan to end my life this week
+- I plan to end my life today
+- I plan to hang myself soon
+- I plan to hang myself this month
+- I plan to hang myself this week
+- I plan to hang myself today
+- I plan to commit suicide soon
+- I plan to hurt myself this month
+- I plan to end it all today
+- I plan to hurt myself today
+- I plan to jump off a bridge soon
+- I plan to jump off a bridge this month
+- I plan to jump off a bridge this week
+- I plan to jump off a bridge today
+- I plan to kill myself soon
+- I plan to kill myself this month
+- I plan to hurt myself soon
+- I plan to drown soon
+- I plan to commit suicide today
+- I plan to cut myself soon
+- I plan to cut myself this month
+- I plan to cut myself this week
+- I plan to cut myself today
+- I plan to die soon
+- I plan to die this month
+- I plan to end my life this month
+- I plan to die today
+- I plan to end my life soon
+- I plan to drown this month
+- I plan to drown this week
+- I plan to drown today
+- I plan to end it all soon
+- I plan to end it all this month
+- I plan to end it all this week
+- I'm going to cut myself this month
+- I plan to die this week
+- I'm planning to kill myself soon
+- I'm planning to hurt myself soon
+- I'm planning to hurt myself this month
+- I'm planning to hurt myself this week
+- I'm planning to hurt myself today
+- I'm planning to jump off a bridge soon
+- I'm planning to jump off a bridge this month
+- I'm planning to kill myself with a gun today
+- I'm planning to jump off a bridge today
+- I'm planning to hang myself this month
+- I'm planning to kill myself this month
+- I'm planning to kill myself this week
+- I'm planning to kill myself today
+- I'm planning to kill myself tomorrow
+- I'm planning to kill myself with a gun soon
+- I'm planning to kill myself with a gun this month
+- I'm going to cut myself
+- I'm planning to jump off a bridge this week
+- I'm planning to end it all this week
+- I'm planning to die this month
+- I'm planning to die this week
+- I'm planning to die today
+- I'm planning to drown soon
+- I'm planning to drown this month
+- I'm planning to drown this week
+- I'm planning to drown today
+- I'm planning to hang myself today
+- I'm planning to end it all this month
+- I'm planning to hang myself this week
+- I'm planning to end it all today
+- I'm planning to end my life soon
+- I'm planning to end my life this month
+- I'm planning to end my life this week
+- I'm planning to end my life today
+- I'm planning to hang myself soon
+- I'm planning to overdose soon
+- I'm planning to end it all soon
+- Should I hang myself?
+- People would be better off if I were dead
+- People wouldn't notice if I were dead
+- Should I commit suicide?
+- Should I cut myself?
+- Should I die?
+- Should I drown?
+- I'm planning to kill myself with a gun this week
+- Should I end my life?
+- No one would notice if I were dead
+- Should I hurt myself?
+- Should I jump off a bridge?
+- Should I kill myself with a gun?
+- Should I kill myself?
+- Should I overdose?
+- Should I shoot myself?
+- Should I take pills?
+- Should I end it all?
+- I'm planning to take pills this week
+- I'm planning to overdose this month
+- I'm planning to overdose this week
+- I'm planning to overdose today
+- I'm planning to shoot myself soon
+- I'm planning to shoot myself this month
+- I'm planning to shoot myself this week
+- I'm planning to shoot myself today
+- Nobody would miss me if I were dead
+- I'm planning to take pills this month
+- Nobody is going to miss me
+- I'm planning to take pills today
+- Life is not worth living
+- Life isn't worth it
+- No one will miss me
+- No one would care if I killed myself
+- No one would care if I were dead
+- I'm planning to cut myself this week
+- I'm planning to take pills soon
+- I'm going to hang myself today
+- I'm going to end my life soon
+- I'm going to end my life this month
+- I'm going to end my life this week
+- I'm going to end my life today
+- I'm going to hang myself
+- I'm going to hang myself soon
+- I'm planning to die soon
+- I'm going to hang myself this week
+- I'm going to end it all this week
+- I'm going to hurt myself
+- I'm going to hurt myself soon
+- I'm going to hurt myself this month
+- I'm going to hurt myself this week
+- I'm going to hurt myself today
+- I'm going to jump off a bridge
+- I'm going to jump off a bridge soon
+- I'm going to hang myself this month
+- I'm going to drown soon
+- There's no hope for me
+- I'm going to cut myself this week
+- I'm going to cut myself today
+- I'm going to die
+- I'm going to die soon
+- I'm going to die this month
+- I'm going to die this week
+- I'm going to end my life
+- I'm going to drown
+- I'm going to end it all today
+- I'm going to drown this month
+- I'm going to drown this week
+- I'm going to drown today
+- I'm going to end it all
+- I'm going to end it all soon
+- I'm going to end it all this month
+- I'm going to jump off a bridge today
+- I'm going to die today
+- I'm going to take pills today
+- I'm going to jump off a bridge this month
+- I'm going to shoot myself this month
+- I'm going to shoot myself this week
+- I'm going to shoot myself today
+- I'm going to slit my wrists
+- I'm going to take pills
+- I'm going to take pills soon
+- I'm going to shoot myself
+- I'm going to take pills this week
+- I'm going to overdose today
+- I'm planning to commit suicide soon
+- I'm planning to commit suicide this month
+- I'm planning to commit suicide this week
+- I'm planning to commit suicide today
+- I'm planning to cut myself soon
+- I'm planning to cut myself this month
+- I'm going to cut myself soon
+- I'm going to take pills this month
+- I'm going to kill myself with a gun this month
+- I'm planning to cut myself today
+- I'm going to kill myself
+- I'm going to kill myself soon
+- I'm going to kill myself this month
+- I'm going to kill myself this week
+- I'm going to kill myself today
+- I'm going to kill myself tomorrow
+- I'm going to shoot myself soon
+- I'm going to kill myself with a gun soon
+- I'm going to jump off a bridge this week
+- I'm going to kill myself with a gun this week
+- I'm going to kill myself with a gun today
+- I'm going to off myself
+- I'm going to overdose
+- I'm going to overdose soon
+- I'm going to overdose this month
+- I'm going to overdose this week
+- I'm going to kill myself with a gun
+
+## intent: faq/ask_creator
+
+- Which company engineered you?
+- Which company made you?
+- Which company programmed you?
+- Which people made you?
+- Who built you?
+- who created you you're a badass
+- Who created you?
+- Do you have a creator?
+- Who developed you?
+- Where do you come from?
+- Who engineered you?
+- Who has built you
+- Who incorporated you?
+- Who is your architect?
+- Who is your creator?
+- Who is your designer?
+- Who is your developer?
+- Who designed you?
+- How were you designed?
+- Do you have a designer?
+- Do you have a developer?
+- Do you have a maker?
+- Do you have a programmer?
+- Hey who built you
+- How did you come into being?
+- How did you come to be?
+- Which company developed you?
+- How were you built?
+- Which company designed you?
+- How were you programmed?
+- What company designed you?
+- What company developed you?
+- What company engineered you?
+- What company produced you?
+- What company programmed you?
+- Where did you come from?
+- Who manifested you?
+- Who did your programming?
+- How did you manifest?
+- Did someone build you?
+- Who is your maker?
+- Does someone write for you?
+- Who writes your lines?
+- Which company coded you?
+- What company built you?
+- Which company built you?
+- Do you have a writer?
+- Who writes for you?
+- Did someone design you?
+- Who's your writer?
+- Did someone develop you?
+- Who's your dev?
+- What team created you?
+- What team made you?
+- Who was responsible for creating you?
+- How did you get coded in the first place?
+- How did you get built?
+- How did you get designed?
+- Did someone create you?
+- Whose product are you
+- How did you get created?
+- Who owns you?
+- Who produced you?
+- Who programmed you?
+- Who's responsible for designing you?
+- Who's responsible for programming you?
+- Who's your creator?
+- Did someone write your lines?
+- Who's your maker?
+- Who made you?
+- Whose program are you?
+- Did someone make you?
+- Did someone program you?
+- Who coded you?
+- What company coded you?
+- Who is your coder?
+- Do you have a coder?
+- Who wrote your lines?
+- Who's your developer?
