@@ -33,6 +33,8 @@ logger.debug("Some log message")  # Use in any function
 ###################### Form Actions #####################
 
 # Custom Functions
+
+
 def custom_request_next_slot(
     self,
     dispatcher: "CollectingDispatcher",
@@ -50,7 +52,6 @@ def custom_request_next_slot(
             return [SlotSet(REQUESTED_SLOT, slot)]
      # no more required slots to fill
     return None
-
 
 
 # Gather Feedback
@@ -97,13 +98,17 @@ class FeedbackForm(FormAction):
         # Used to get yes or no answer
         feedback = tracker.get_slot("feedback")
         reason = tracker.get_slot("feedback_reason")
-        dispatcher.utter_message(
-            text="Your feedback was {} due to {}".format(feedback, reason))
+        if (feedback):
+            dispatcher.utter_message(
+                text="Your feedback was Positive. Comments: {}".format(reason))
+        else:
+            dispatcher.utter_message(
+                text="Your feedback was Negative. Reason: {}".format(reason))
 
         dispatcher.utter_message(
             text="Thanks for your feedback")
         return [SlotSet("feedback", None),
-        SlotSet("feedback_reason", None)]
+                SlotSet("feedback_reason", None)]
         # return []
 
 
@@ -192,15 +197,12 @@ class BioForm(FormAction):
             return {"slotname": None}
     '''
 
-    
     ############### Validate all slots ###################
 
-    
     def validate(self,
                  dispatcher: CollectingDispatcher,
                  tracker: Tracker,
                  domain: Dict[Text, Any]) -> List[Dict]:
-
         """Validate extracted requested slot
         else reject the execution of the form action
         """
@@ -213,7 +215,7 @@ class BioForm(FormAction):
             slot_values.update(self.extract_requested_slot(dispatcher,
                                                            tracker, domain))
             if not slot_values:
-                #Custom behaviour
+                # Custom behaviour
                 # if slot_to_fill == 'name':
                 #     dispatcher.utter_message(text="Sorry. I didn't understand your {} and {}".format(slot_to_fill, slot_values))
                 #     return []
@@ -223,9 +225,9 @@ class BioForm(FormAction):
                 # if some slot was requested but nothing was extracted
                 # it will allow other policies to predict another action
                 raise ActionExecutionRejection(self.name(),
-                                           "Failed to validate slot {0}"
-                                           "with action {1}"
-                                           "".format(slot_to_fill,
+                                               "Failed to validate slot {0}"
+                                               "with action {1}"
+                                               "".format(slot_to_fill,
                                                          self.name()))
         # Validate every slots here, and set it to none for that doesn't match
         # for slot, value in slot_values.items():
@@ -236,7 +238,6 @@ class BioForm(FormAction):
         # validation succeed, set the slots values to the extracted values
         return [SlotSet(slot, value) for slot, value in slot_values.items()]
         # return await self.validate_slots(slot_values, dispatcher, tracker, domain)
-    
 
     def submit(self,
                dispatcher: CollectingDispatcher,
@@ -248,10 +249,10 @@ class BioForm(FormAction):
 
         # utter submit template
         dispatcher.utter_message(template="utter_bioform_submit")
-        # Custom json data in action message 
+        # Custom json data in action message
         # dispatcher.utter_message(text="", json_message={"image_id": "1","payload": "code_1"})
 
-        # Buttons in action message 
+        # Buttons in action message
         # buttons = []
         # for i in range(3):
         #     buttons.append({"title": "{}".format(str(i)),
@@ -268,16 +269,18 @@ class BioForm(FormAction):
 
 # Echo user input
 class ActionRespondWithUserMessage(Action):
-   def name(self):
-      return "action_respond_with_user_message"
+    def name(self):
+        return "action_respond_with_user_message"
 
-   def run(self, dispatcher, tracker, domain):
-      last_message = tracker.latest_message.get("text", "")
-      dispatcher.utter_message(last_message)
+    def run(self, dispatcher, tracker, domain):
+        last_message = tracker.latest_message.get("text", "")
+        dispatcher.utter_message(last_message)
 
-      return []
+        return []
 
 # Reset conversation
+
+
 class ActionGreetUser(Action):
     """Revertible mapped action for utter_greet"""
 
@@ -291,6 +294,8 @@ class ActionGreetUser(Action):
         return [UserUtteranceReverted()]
 
 # Give sample multimedia messages
+
+
 class ActionMultimediaExamples(Action):
     """Revertible mapped action for utter_greet"""
 
@@ -300,7 +305,7 @@ class ActionMultimediaExamples(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
+
         multimedia = tracker.get_slot("multimedia")
         dispatcher.utter_message(template="utter_{}".format(multimedia))
         return []
