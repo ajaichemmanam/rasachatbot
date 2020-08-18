@@ -77,12 +77,13 @@ slots:
     - feedback_reason
 responses:
   utter_greet:
-  - text: Hey! How are you?
-    
-  # - text: Hey!
+  - text: Hey!
+  - text: Hey there!
+  - text: Hello!
+  - text: Hi.
+  # - text: Hey! How are you?
   # - text: Hello! How can I help you?
   # - text: Hi. What are you looking for?
-  # - text: Hey there!
   # - text: Hello! How can I help you today?
   utter_help:
     - text: I can help you with many things like
@@ -95,13 +96,14 @@ responses:
         payload: What's your name?
       - title: I am travelling to India
         payload: I am travelling to India
-  - text: >
-        I can help you with many things. \n
-        You can ask me things like  \n
-        • Play video
-        • Show an image
-        • What's your name?
-        • I am travelling to India
+    - text: |
+        I can help you with many things. 
+        You can ask me things like  
+        <br> <br> 
+        • Play video <br> 
+        • Show an image <br> 
+        • What's your name? <br> 
+        • I am travelling to India <br> 
   utter_ask_whatelse:
   - text: What else can I help you with?
   utter_image:
@@ -175,17 +177,17 @@ responses:
       Thanks for the information.
       Your Name is {name} aged {age} living in {address}.
       Your Email {email}
-      Shall I share these info with our travel partner?
+      Am I correct?
   - text: >
       Got it. 
       Your Name is {name} aged {age} living in {address}.
       Your Email {email}
-      Shall I share these info with our travel partner?
+      Am I correct?
   - text: >
       Thanks for the details.
       Your Name is {name} aged {age} living in {address}.
       Your Email {email}
-      Shall I share these info with our travel partner?
+      Am I correct?
 
   # utter_form_submit:
   # - text: Thanks for the information
