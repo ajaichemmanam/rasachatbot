@@ -3,6 +3,10 @@
   - utter_greet
   - utter_help
 
+## goodbye
+* goodbye
+  - utter_goodbye
+
 ## ask help
 * help
   - utter_help
