@@ -14,4 +14,5 @@ rasa run actions --actions actions&
 rasa run --model /app/models --enable-api \
         --endpoints /app/config/endpoints.yml \
         --credentials /app/config/credentials.yml \
+        --cors "*" \
         -p $PORT
