@@ -136,7 +136,7 @@ class BioForm(FormAction):
                                         intent='inform'),
                 "email": self.from_entity(entity="email",
                                           intent='inform'),
-                "address": self.from_text(intent=None)}
+                "address": [self.from_entity(entity="location"), self.from_text()]}
 
         # Get user input if it matches with the intent "IntentName"
         # "address": self.from_text(intent="IntentName")

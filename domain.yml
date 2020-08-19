@@ -92,10 +92,10 @@ responses:
         payload: Play video
       - title: Show an image
         payload: Show an image
+      - title: Open a sample document
+        payload: Open a sample document
       - title: What's your name?
         payload: What's your name?
-      - title: I am travelling to India
-        payload: I am travelling to India
     - text: |
         I can help you with many things. 
         You can ask me things like  
@@ -103,7 +103,7 @@ responses:
         • Play video <br> 
         • Show an image <br> 
         • What's your name? <br> 
-        • I am travelling to India <br> 
+        • Open a sample document <br> 
   utter_ask_whatelse:
   - text: What else can I help you with?
   utter_image:
