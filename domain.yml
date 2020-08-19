@@ -123,7 +123,7 @@ responses:
     text: 'This is an audio'
   utter_document:
   - custom: 
-      - document: http://africau.edu/images/default/sample.pdf
+      - document: https://file-examples-com.github.io/uploads/2017/10/file-sample_150kB.pdf
         description: document description
     text: 'This is a sample document'
   utter_cheer_up:
