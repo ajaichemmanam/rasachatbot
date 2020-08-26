@@ -2,6 +2,9 @@
 
 This is a complete chatbot backend built with Rasa
 
+## Demo
+Chatbot: https://rasachatbotapp.herokuapp.com/
+
 ## Run on local machine
 
 #### Using docker
@@ -57,7 +60,7 @@ docker-compose up
 
 #### Train Rasa model
 
-The repository already contains a trained Rasa model at models directory. To retrain the model you can run:
+You may download a pretrained model from this repo's release page and copy to models directory. To retrain the model you can run:
 
 ```bash
 docker run --rm --volume $(pwd):/app \
