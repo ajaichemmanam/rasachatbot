@@ -5,18 +5,18 @@
 # RUN chmod +x /app/start_services.sh
 # CMD /app/start_services.sh
 
-FROM rasa/rasa:1.10.10
+FROM rasa/rasa:1.10.11
 
 USER root
 ADD ./models /app/models/
 ADD ./config /app/config/
 ADD ./actions /app/actions/
 ADD ./scripts /app/scripts/
+ADD ./trackerStore /app/trackerStore/
 ADD ./data /app/data/
 ADD ./domain.yml /app/
 ADD ./config.yml /app/
 
 RUN chmod +x /app/scripts/*
-
 ENTRYPOINT []
 CMD /app/scripts/start_services.sh

@@ -1,5 +1,6 @@
 .DS_Store
 models/
+trackerStore/chatHistoryLogs/*.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

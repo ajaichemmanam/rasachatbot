@@ -10,7 +10,7 @@ Both action server and rasa-core runs as separate processes in the same containe
 
 ```
 docker build -t rasachatbot .
-docker run -it --rm -p 5005:5005 --env-file $(pwd)/.env rasachatbot
+docker run -it --rm -p 5005:5005 -v $(pwd)/trackerStore/chatHistyLogs:/app/chatHistoryLogs --env-file $(pwd)/.env rasachatbot
 ```
 
 It starts a webserver with rest api and listens for messages at localhost:5005
